@@ -1,0 +1,102 @@
+/* Base Page Reset and Typography */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Header Banner Layout */
+header {
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* Main Content Center Column */
+main {
+    max-width: 530px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Central Image Box and Drop Shadow styling */
+picture {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+picture img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Structured Section Cards */
+section {
+    background-color: #ededed;
+    padding: 24px 28px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #757575;
+}
+
+section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+section a {
+    color: #0026ff;
+}
+
+/* Information List inside Cards */
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+section li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+/* Footer Banner Layout */
+footer {
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.05rem;
+}
