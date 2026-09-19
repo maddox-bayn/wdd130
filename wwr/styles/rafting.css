@@ -1,0 +1,152 @@
+/* 1. Root Variables Block with Curated High-Contrast Color Scheme */
+:root {
+    --primary-color: #1a365d;
+    /* Deep River Blue (Headings) */
+    --accent1-color: #2b6cb0;
+    /* Clear Water Blue (Text/Overlay Background) */
+    --accent2-color: #dd6b20;
+    /* Splash Orange (Accents/Callouts) */
+    --light-bg: #f7fafc;
+    /* Soft Off-White Background */
+    --heading-font: 'Trebuchet MS', 'Lucida Sans Standard', Arial, sans-serif;
+    --body-font: 'Georgia', Times, serif;
+}
+
+/* 2. Global Reset Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Base Document Body Setup */
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+/* 4. Page Layout Containment & Centerization */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Header & Semantic Navigation Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+header > img {
+    max-width: 120px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-weight: bold;
+    font-family: var(--heading-font);
+}
+
+header nav a:hover {
+    color: var(--accent2-color);
+}
+
+/* 5. Typography Headings Setup */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* 6. Base Padding and Margins for Structure */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* 7. Footer & Social Media Resets */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--primary-color);
+    margin-top: 30px;
+    padding: 20px 16px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 24px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* 8. Absolute Layout Positioning for Hero Showcase & Overlays */
+.hero {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Absolute Title Overlap Overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+    /* Explicit high contrast white */
+}
+
+/* Absolute Article Content Box Overlap Overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--accent1-color);
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Inline Right Image Float Separation inside Hero Card */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
