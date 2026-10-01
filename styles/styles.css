@@ -47,7 +47,7 @@ main {
 h1 {
     color: var(--primary-color);
     /* Color declaration */
-    border-bottom: #000;
+    border-bottom: 1px solid #777;
 }
 
 .grid {
