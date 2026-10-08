@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | White Water Rafting Co.</title>
+    <meta name="description"
+      content="Have questions about our white water rafting trips? Get in touch with White Water Rafting Co. today for reservations, inquiries, and customer support.">
+    <meta name="author" content="Oduh Emmanuel">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <!-- Shared Header Layout -->
+    <header>
+        <img src="images/logo.jpg" alt="White Water Rafting Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Form Content Section -->
+    <main>
+
+        <!-- Company Information Header block -->
+        <section class="company-directory">
+            <h1>White Water Rafting Company</h1>
+            <p class="address">123 Main River Street<br>Kolob, California</p>
+            <p class="phone">+1 999 999 9999</p>
+            <p class="email">info@whitewater.com</p>
+        </section>
+
+        <!-- Dynamic Grid Workspace containing Map & Form -->
+        <div class="contact-grid">
+
+            <!-- Map Container (Cleaned inline border styling per specifications) -->
+            <div class="map-container">
+                <iframe src="https://google.com" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Fully Functional Layout Form Workspace -->
+            <form action="#" method="post" class="contact-form">
+
+                <div class="form-item">
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" placeholder="Your Name"
+                      required>
+                </div>
+
+                <div class="form-item">
+                    <label for="useremail">Email</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="Your Email"
+                      required>
+                </div>
+
+                <fieldset class="form-fieldset">
+                    <legend>Message Purpose</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="inquiry" name="purpose" value="general" checked>
+                        <label for="inquiry">General Inquiry</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reservation" name="purpose" value="reservation">
+                        <label for="reservation">Reservation Question</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                        <label for="suggestion">Website Suggestion</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-item">
+                    <label for="usermessage">Message</label>
+                    <textarea id="usermessage" name="usermessage" rows="5"
+                      placeholder="Type here..." required></textarea>
+                </div>
+
+                <div class="checkbox-option">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit" class="form-submit">Get in Touch!</button>
+            </form>
+        </div>
+
+        <!-- Team Profile Section Below Layout Block -->
+        <section class="team-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="team-grid">
+                <figure class="team-card">
+                    <img src="images/employee1.jpg"
+                      alt="John Doe, Operations Director Profile Photo">
+                    <figcaption><strong>John Doe</strong><br>Operations Director</figcaption>
+                </figure>
+                <figure class="team-card">
+                    <img src="images/employee2.jpg"
+                      alt="Jane Smith, Lead River Guide Profile Photo">
+                    <figcaption><strong>Jane Smith</strong><br>Lead River Guide</figcaption>
+                </figure>
+                <figure class="team-card">
+                    <img src="images/employee3.jpg"
+                      alt="Alex Wilson, Safety Inspector Profile Photo">
+                    <figcaption><strong>Alex Wilson</strong><br>Safety Inspector</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer Layout -->
+    <footer>
+        <p>&copy; 2026 White Water Rafting Co. | Oduh Emmanuel</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="https://youtube.com">
+                <img src="images/youtube.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
