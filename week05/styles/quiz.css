@@ -1,0 +1,107 @@
+/* General page styling - Centering content */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333333;
+
+    /* Flexbox layout to center elements horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Heading section styling */
+.quiz-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #001f8d;
+    margin-bottom: 20px;
+}
+
+.quiz-title span {
+    margin-right: 10px;
+}
+
+/* Main quiz box container */
+.quiz-container {
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 25px;
+    max-width: 600px;
+}
+
+/* Individual question block spacing */
+.question-group {
+    margin-bottom: 25px;
+}
+
+/* Question label formatting */
+.question-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+/* Dark blue numbering style */
+.q-num {
+    color: #001f8d;
+    font-weight: bold;
+}
+
+/* Input field formatting (Text fields, Select, Textarea) */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* Fixing fixed size for the textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Question 4 Code Snippet styling */
+.code-box {
+    background-color: #333333;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 450px;
+    border-radius: 2px;
+    border: 1px solid #111111;
+}
+
+/* Large blue submit button */
+.submit-btn {
+    width: 100%;
+    background-color: #000c8a;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #000966;
+}
