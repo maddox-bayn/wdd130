@@ -1,22 +1,377 @@
-/* ==========================================
-   5. Contact Page Specific Extensions
-   ========================================== */
+/* ==========================================================================
+   1. Root Variables Block with Curated High-Contrast Color Scheme
+   ========================================================================== */
+:root {
+    --primary-color: #1a365d;
+    /* Deep River Blue */
+    --accent1-color: #2b6cb0;
+    /* Clear Water Blue */
+    --accent2-color: #dd6b20;
+    /* Splash Orange */
+    --light-bg: #f7fafc;
+    /* Soft Off-White Background */
+    --heading-font: 'Trebuchet MS', 'Lucida Sans Standard', Arial, sans-serif;
+    --body-font: 'Georgia', Times, serif;
+}
 
-/* Typography & Headings inside main */
+/* ==========================================================================
+   2. Global Reset & Base Setup
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+/* Page Layout Containment & Centerization */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. Header & Semantic Navigation Styling (Global)
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+}
+
+header > img {
+    max-width: 120px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-family: var(--heading-font);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--accent2-color);
+}
+
+/* ==========================================================================
+   4. Global Typography Utilities inside main
+   ========================================================================== */
 main h1 {
     font-family: var(--heading-font);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 main h2 {
     font-family: var(--heading-font);
     text-align: center;
-    margin: 30px 0 20px 0;
+    color: var(--primary-color);
+    margin: 40px 0 20px 0;
+    font-size: 24px;
 }
 
-/* Company directory alignment formatting */
+/* ==========================================================================
+   5. Index / Home Page Layout Style Implementations
+   ========================================================================== */
+
+/* Absolute Position Hero Block System */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(26, 54, 93, 0.85);
+    /* Semitransparent Primary */
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-box h1 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-box p {
+    color: #f7fafc;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent2-color);
+    color: white;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #c05621;
+}
+
+/* Grid Offerings Layout Box */
+.offerings-section > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.offering-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.offering-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.offering-card h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 10px;
+    color: var(--accent1-color);
+}
+
+/* Nested Newsletter Form Section */
+.newsletter-section {
+    background-color: #edf2f7;
+    border-radius: 6px;
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.newsletter-box h2 {
+    margin-top: 0;
+}
+
+.newsletter-box p {
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-fields {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.newsletter-fields label {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.newsletter-fields input {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.newsletter-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter-submit:hover {
+    background-color: var(--accent1-color);
+}
+
+/* ==========================================================================
+   6. Trips Page Specific Design Architecture Layouts
+   ========================================================================== */
+
+/* Top Conversion Call to Action Banner */
+.trips-cta-banner {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trips-cta-banner h2 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+}
+
+.trips-cta-banner p {
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+}
+
+.trips-contact-btn {
+    display: inline-block;
+    background-color: var(--accent2-color);
+    color: white;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.trips-contact-btn:hover {
+    background-color: #c05621;
+}
+
+/* Detailed Grid Rows for Trip Card Profiles */
+.trip-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.detailed-trip-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.detailed-trip-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    object-fit: cover;
+}
+
+.trip-info {
+    padding: 20px;
+}
+
+.trip-info h3 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+/* Table Information Outlining Rulesets */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+.trips-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.trips-data-table th,
+.trips-data-table td {
+    padding: 14px 20px;
+    text-align: left;
+}
+
+.trips-data-table th {
+    background-color: var(--accent1-color);
+    color: white;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+.trips-data-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.trips-data-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.trips-data-table tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* ==========================================================================
+   7. Contact Page Specific Extensions
+   ========================================================================== */
 .company-directory {
     text-align: center;
     margin-bottom: 30px;
@@ -26,7 +381,6 @@ main h2 {
     margin: 4px 0;
 }
 
-/* Flexbox/Grid Structure matching Wireframe splits */
 .contact-grid {
     display: flex;
     gap: 30px;
@@ -39,17 +393,14 @@ main h2 {
     width: 50%;
 }
 
-/* Standardized responsive map canvas layout properties */
 .map-container iframe {
     width: 100%;
     height: 100%;
     min-height: 400px;
     border: 0;
-    /* Inline border configuration moved to CSS successfully */
     border-radius: 4px;
 }
 
-/* Form structure elements styling configuration */
 .form-item {
     margin-bottom: 15px;
 }
@@ -70,7 +421,6 @@ main h2 {
     font-family: inherit;
 }
 
-/* Clean UI adjustments for fieldset layouts */
 .form-fieldset {
     border: none;
     padding: 0;
@@ -90,7 +440,6 @@ main h2 {
     margin-bottom: 8px;
 }
 
-/* Custom styled action execution button */
 .form-submit {
     width: 100%;
     background-color: var(--accent2-color);
@@ -109,7 +458,6 @@ main h2 {
     background-color: #c05621;
 }
 
-/* Employee structure display zone rulesets */
 .team-grid {
     display: flex;
     justify-content: space-between;
@@ -140,7 +488,6 @@ main h2 {
     line-height: 1.4;
 }
 
-/* Global modifications for general semantic consistency */
 footer {
     display: flex;
     justify-content: space-between;
